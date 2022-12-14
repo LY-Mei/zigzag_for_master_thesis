@@ -64,4 +64,4 @@ class AcceleratorParser:
         return self.accelerator
 
     def get_supported_accelerators(self):
-        return list(self.supported_accelerators.keys())
+        return list(self.supported_accelerators.values())
