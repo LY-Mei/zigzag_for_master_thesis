@@ -37,7 +37,7 @@ class CompleteSaveStage(Stage):
             cme: CostModelEvaluation
             filename = self.dump_filename_pattern.format(datetime=datetime.now().isoformat().replace(":", "-"))
             self.save_to_json(cme, filename=filename)
-            logger.info(f"Saved CME with energy {cme.energy_total:.3e} and latency {cme.latency_total2:.3e} to {filename}.")
+            logger.info(f"Saved {extra_info[0]}'s CME with energy {cme.energy_total:.3e} and latency {cme.latency_total2:.3e} to {filename}.")
             yield cme, extra_info
 
     def save_to_json(self, obj, filename):

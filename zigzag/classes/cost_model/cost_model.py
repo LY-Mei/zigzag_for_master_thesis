@@ -228,6 +228,7 @@ class CostModelEvaluation:
             },
             "inputs": {
                 "accelerator": self.accelerator,
+                "layer_index": self.layer.id,
                 "layer": self.layer,
                 "spatial_mapping": self.spatial_mapping,
                 "temporal_mapping": self.temporal_mapping,
